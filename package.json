@@ -1,0 +1,20 @@
+{
+  "name": "Augmedix-test",
+  "version": "1.0.0",
+  "description": "Assessment Test",
+  "main": "index.js",
+  "author": "Sabbir Ahmed Siddiquee <prince3339@ymail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -w server.js server.js",
+    "start": "node server.js -p $PORT",
+    "build": "next build"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^9.0.0",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
