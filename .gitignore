@@ -1,1 +1,9 @@
-/node_modules
+# Compiled output from webpack
+dist
+node_modules
+
+# Env files
+.env
+
+# Next source
+.next
