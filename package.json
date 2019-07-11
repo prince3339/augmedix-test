@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "nodemon -w server.js server.js",
     "start": "node server.js -p $PORT",
-    "build": "next build"
+    "build": "next build",
+    "export": "next export",
+    "test": "next start"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

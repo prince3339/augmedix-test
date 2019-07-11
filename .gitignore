@@ -1,5 +1,6 @@
 # Compiled output from webpack
 dist
+out
 node_modules
 
 # Env files
