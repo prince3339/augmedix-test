@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Test from 'containers/Test';
 import React, { Fragment } from 'react';
 
 class IndexPage extends React.Component {
@@ -8,9 +9,7 @@ class IndexPage extends React.Component {
         <Head>
           <title>Home - Augmedix</title>
         </Head>
-        <p>
-          Landed on Home successfully!!!
-        </p>
+        <Test />
       </Fragment>
     );
   }
