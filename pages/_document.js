@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
           <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" />
-          <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+          <meta meta="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
           <link rel="shortcut icon" type='image/x-icon' href="/static/favicon.co" />
           <meta name="theme-color" content="#288DC1" />
         </Head>

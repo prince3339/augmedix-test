@@ -1,23 +1,23 @@
 import React from 'react';
+import Navbar from 'components/core/navbar/Navbar';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-class AppLayout extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    const { children } = this.props;
+const LayoutStyle = styled.section`
+  background: white;
+`;
 
-    return (
-      <section>
-        {children}
-      </section>
-    )
-  }
-}
+const AppLayout = ({ children }) => (
+  <LayoutStyle>
+    <Navbar />
+    <div>
+      {children}
+    </div>
+  </LayoutStyle>
+);
 
 AppLayout.propTypes = {
   children: PropTypes.element.isRequired,
-}
+};
 
 export default AppLayout;
