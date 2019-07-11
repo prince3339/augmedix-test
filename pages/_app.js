@@ -1,12 +1,9 @@
+import 'style/main.scss';
 import React from 'react';
-import AppLayout from './AppLayout';
 import App, { Container } from 'next/app';
+import AppLayout from './AppLayout';
 
 class MyApp extends App {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const {
       Component,
