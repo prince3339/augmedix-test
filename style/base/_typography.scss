@@ -1,0 +1,37 @@
+%default_line_height {
+  line-height: 1.2;
+}
+
+h1 {
+	@extend %default_line_height;
+	font-size: 3.6rem;
+}
+
+h2 {
+	@extend %default_line_height;
+	font-size: 3rem;
+}
+
+h3 {
+	@extend %default_line_height;
+	font-size: 2.4rem;
+}
+
+h4 {
+	@extend %default_line_height;
+	font-size: 2rem;
+}
+
+h5 {
+	@extend %default_line_height;
+	font-size: 1.8rem;
+}
+
+h6 {
+	@extend %default_line_height;
+	font-size: 1.6rem; 
+}
+
+span {
+	@extend %default_line_height;
+}
