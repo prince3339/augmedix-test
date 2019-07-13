@@ -1,11 +1,30 @@
+
+import Link from 'next/link';
 import React from 'react';
+import { Span } from 'utils/helpers/typography';
 import PropTypes from 'prop-types';
 import Logo from './assets/svg';
-import StyledHeader from './style';
+import {
+  LogoStyle,
+  StyledHeader,
+} from './style';
 
 const Navbar = ({ currentRoute }) => (
   <StyledHeader>
-    <Logo />
+    <nav>
+      <Link href="/">
+        <LogoStyle>
+          <Logo />
+          <Span
+            bold
+            color="darkBlue"
+            fontSize="18"
+          >
+            BLOG
+          </Span>
+        </LogoStyle>
+      </Link>
+    </nav>
   </StyledHeader>
 );
 

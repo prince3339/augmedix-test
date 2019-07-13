@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import colorMap from 'utils/mixins/colorMap.style';
-import breakpoint from 'utils/mixins/breakpoints.style';
+import colorMap from 'utils/mixins/colorMap';
+import breakpoint from 'utils/mixins/breakpoints';
 
 const CommonStyle = css`
   ${props => props.bold && `
