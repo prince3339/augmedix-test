@@ -1,18 +1,14 @@
 import Head from 'next/head';
-import Test from 'containers/Test';
+import Post from 'containers/Post';
 import React, { Fragment } from 'react';
 
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <Fragment>
-        <Head>
-          <title>Home - Augmedix</title>
-        </Head>
-        <Test />
-      </Fragment>
-    );
-  }
-}
+const IndexPage = () => (
+  <Fragment>
+    <Head>
+      <title>Home - Augmedix</title>
+    </Head>
+    <Post />
+  </Fragment>
+);
 
 export default IndexPage;
