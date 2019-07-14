@@ -1,6 +1,6 @@
-import Post from 'components/Post/Post';
 import React from 'react';
 import axios from 'axios';
+import PostFeed from 'components/Post/PostFeed';
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -19,13 +19,9 @@ class PostContainer extends React.Component {
   render() {
     const { posts } = this.state;
     return (
-      <React.Fragment>
-        {posts.map(post => (
-          <Post
-            title={post.title}
-          />
-        ))}
-      </React.Fragment>
+      <PostFeed
+        posts={posts}
+      />
     );
   }
 }
