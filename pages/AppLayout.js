@@ -8,20 +8,30 @@ const LayoutStyle = styled.section`
   background: ${colorMap('white')};
   max-width: 117.8rem;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 8rem 2rem;
 `;
 
-const AppLayout = ({ children }) => (
+const AppLayout = ({
+  children,
+  currentRoute,
+}) => (
   <LayoutStyle>
-    <Navbar />
+    <Navbar
+      currentRoute={currentRoute}
+    />
     <div>
       {children}
     </div>
   </LayoutStyle>
 );
 
+AppLayout.defaultProps = {
+  currentRoute: '',
+};
+
 AppLayout.propTypes = {
   children: PropTypes.element.isRequired,
+  currentRoute: PropTypes.string,
 };
 
 export default AppLayout;

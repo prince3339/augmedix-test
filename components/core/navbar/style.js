@@ -13,7 +13,12 @@ const LogoStyle = styled.a`
 `;
 
 const StyledHeader = styled.header`
-
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 `;
 
 export {

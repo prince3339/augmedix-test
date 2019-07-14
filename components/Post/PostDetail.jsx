@@ -15,12 +15,14 @@ class PostDetail extends React.Component {
       isEditMode: false,
     };
 
-    this.enableEditMode = this.enableEditMode.bind(this);
+    this.toggleEditMode = this.toggleEditMode.bind(this);
   }
 
-  enableEditMode() {
+  toggleEditMode() {
+    const { isEditMode } = this.state;
+
     this.setState({
-      isEditMode: true,
+      isEditMode: !isEditMode,
     });
   }
 
@@ -31,6 +33,7 @@ class PostDetail extends React.Component {
       post,
       comments,
       deletePost,
+      updatePost,
       deleteComment,
     } = this.props;
     return (
@@ -38,53 +41,67 @@ class PostDetail extends React.Component {
         {isEditMode
           && (
             <Formik
-              onSubmit={(values, { setErrors }) => {
-                console.log(post);
+              onSubmit={(values, { setSubmitting }) => {
+                updatePost(values, this.toggleEditMode);
               }}
-              component={PostUpdateForm}
+              render={
+                formikProps => (
+                  <PostUpdateForm
+                    toggleEditMode={this.toggleEditMode}
+                    {...formikProps}
+                  />
+                )
+              }
               initialValues={post}
             />
           )
         }
 
-        <AugH1
-          bold
-          color="darkBlue"
-          fontSize="28"
-        >
-          {post.title}
-          <Button
-            type="button"
-            color="primary"
-            onClick={this.enableEditMode}
-            transparent
-          >
-            <EditIcon />
-          </Button>
-        </AugH1>
-        <AugPara>
-          {post.body}
-        </AugPara>
-        <div className="post-action">
-          <Button
-            type="button"
-            color="primary"
-            fontSize="14"
-            transparent
-          >
-            Update this post
-          </Button>
-          <Button
-            type="button"
-            color="warn"
-            onClick={deletePost}
-            fontSize="14"
-            className="margin-left-10"
-            transparent
-          >
-           Delete this post
-          </Button>
-        </div>
+        {!isEditMode && post
+          && (
+            <React.Fragment>
+              <AugH1
+                bold
+                color="darkBlue"
+                fontSize="28"
+              >
+                {post.title}
+                <Button
+                  type="button"
+                  color="primary"
+                  onClick={this.toggleEditMode}
+                  transparent
+                >
+                  <EditIcon />
+                </Button>
+              </AugH1>
+              <AugPara>
+                {post.body}
+              </AugPara>
+              <div className="post-action">
+                <Button
+                  type="button"
+                  color="primary"
+                  onClick={this.toggleEditMode}
+                  fontSize="14"
+                  transparent
+                >
+                  Update this post
+                </Button>
+                <Button
+                  type="button"
+                  color="warn"
+                  onClick={deletePost}
+                  fontSize="14"
+                  className="margin-left-10"
+                  transparent
+                >
+                  Delete this post
+                </Button>
+              </div>
+            </React.Fragment>
+          )
+        }
         <div className="comment-container">
           <Span
             bold
@@ -105,8 +122,9 @@ class PostDetail extends React.Component {
 }
 
 PostDetail.defaultProps = {
-  post: {},
+  post: null,
   comments: [],
+  updatePost: () => {},
   deletePost: () => {},
   deleteComment: () => {},
 };
@@ -125,6 +143,7 @@ PostDetail.propTypes = {
       postId: PropTypes.number,
     }),
   ),
+  updatePost: PropTypes.func,
   deletePost: PropTypes.func,
   deleteComment: PropTypes.func,
 };
