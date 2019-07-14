@@ -15,6 +15,7 @@ const PostFeed = ({ posts }) => (
       <Post
         key={post.id}
         title={post.title}
+        postId={post.id}
         tileSize={feedSizes[Math.floor(Math.random() * 3)]}
       />
     ))}

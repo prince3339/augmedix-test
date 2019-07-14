@@ -3,6 +3,7 @@ import colorMap from 'utils/mixins/colorMap';
 import breakpoint from 'utils/mixins/breakpoints';
 
 const CommonStyle = css`
+  font-weight: normal;
   ${props => props.bold && `
     font-weight: bold;
   `};
@@ -35,6 +36,7 @@ const CommonStyle = css`
 const AugH1 = styled.h1`
   font-size: 4.2rem;
   color: ${colorMap('black')};
+  font-family: 'Nunito', sans-serif;
   ${CommonStyle};
 
   ${breakpoint.ltSm`
@@ -45,6 +47,7 @@ const AugH1 = styled.h1`
 const AugH2 = styled.h2`
   font-size: 3.2rem;
   color: ${colorMap('black')};
+  font-family: 'Nunito', sans-serif;
   ${CommonStyle};
 
   ${breakpoint.ltSm`

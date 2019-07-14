@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import colorMap from 'utils/mixins/colorMap';
 
-const PostStyle = styled.article`
-  padding: 3.5rem;
+const PostStyle = styled.li`
+  display: block;
   background: ${colorMap('grey1')};
   transition: background 0.2s;
+  cursor: pointer;
   &:hover {
     h2 {
       color: ${colorMap('white')};
@@ -21,9 +22,16 @@ const PostStyle = styled.article`
     grid-column-end: span 2;
     grid-row-end: span 2;
   `};
+
+  a {
+    padding: 3.5rem;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+  }
 `;
 
-const PostContainerStyle = styled.div`
+const PostContainerStyle = styled.ul`
   margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
@@ -31,9 +39,17 @@ const PostContainerStyle = styled.div`
   grid-auto-rows: minmax(20.5rem, auto);
   grid-auto-flow: dense;
   padding: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const PostDetailStyle = styled.div`
+
 `;
 
 export {
   PostStyle,
+  PostDetailStyle,
   PostContainerStyle,
 };
