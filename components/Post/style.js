@@ -32,24 +32,48 @@ const PostStyle = styled.li`
 `;
 
 const PostContainerStyle = styled.ul`
-  margin-top: 2.5rem;
+  margin: 2rem 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-auto-rows: minmax(20.5rem, auto);
   grid-auto-flow: dense;
   padding: 10px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 `;
 
 const PostDetailStyle = styled.div`
+  .post-action {
+    margin-top: 5rem;
+    button {
+      padding: 0;
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  h1 {
+    button {
+      margin-left: 1.6rem;
+      padding: 0;
+    }
+  }
+
+  .comment-container {
+    margin-top: 2.5rem;
+    padding-top: 5.5rem;
+    border-top: 1px solid ${colorMap('grey1')};
+  }
+`;
+
+const FormStyle = styled.div`
 
 `;
 
 export {
   PostStyle,
+  FormStyle,
   PostDetailStyle,
   PostContainerStyle,
 };
