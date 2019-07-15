@@ -35,9 +35,9 @@ $ yarn preview/ npm run preview [It'll run the app at localhost:3000 in producti
  | - static
  |  | - Static resources (Ex: image)
  | - style
- |  | - css/sass styles are here
+ |  | - css/sass styles are here (base/global styles)
  | - utils
- |  | - helpers/settings etc
+ |  | - helpers/settings (colorMap, Breakpoint, typography...)
  | -.babelrc.js (babel config)
  | -.eslintrc.js (eslint config file for IDE linting support)
  | -.gitignore
