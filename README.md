@@ -34,8 +34,6 @@ $ yarn preview/ npm run preview [It'll run the app at localhost:3000 in producti
  |  | - Routed pages
  | - static
  |  | - Static resources (Ex: image)
- | - static
- |  | - Static resources (Ex: image)
  | - style
  |  | - css/sass styles are here
  | - utils
