@@ -12,9 +12,12 @@ A step by step series of examples that tell you how to get a development env run
 
 ```
 Clone this repo https://github.com/prince3339/simple-blog.git
+
 Install yarn (if you haven't yet): https://yarnpkg.com/lang/en/docs/install/#windows-stable [Recommended. It'll work with npm without this though]
+
 Create a .env file inside the root folder. Copy and paste the following line in .env file (It's basically a environment settings file. To run locally you can ignore it).
-`NODE_ENV="development"` 
+
+NODE_ENV="development"
 
 $ yarn/npm install (To install all dependencies)
 $ yarn dev/ npm run dev [It'll run the app at localhost:3000 in development mode]
