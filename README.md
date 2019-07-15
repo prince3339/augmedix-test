@@ -64,9 +64,9 @@ $ yarn preview/ npm run preview [It'll run the app at localhost:3000 in producti
  | -routes.js (Necessary routes are here)
  | -server.js (Project Server file)
  
- Here 3 steps are followed to render a page. 
- 1. Components: No data logic here. It accepts data and render.
- 2. Containers: Fetching data and other logical parts are here.
- 3. Pages: Finally we import containers here to render a page with routing
- 
 ```
+ 
+ ### Here 3 steps are followed to render a page. 
+ #### 1. Components: No data logic here. It accepts data and render.
+ #### 2. Containers: Fetching data and other logical parts are here.
+ #### 3. Pages: Finally we import containers here to render a page with routing
